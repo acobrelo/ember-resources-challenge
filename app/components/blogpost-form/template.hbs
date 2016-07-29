@@ -1,1 +1,19 @@
-{{yield}}
+<form {{action "submit" on="submit"}}>
+  {{input placeholder="Title"
+          class="input-group form-control"
+          value=form.title}}
+
+  {{input placeholder="Post"
+          class="input-group form-control"
+          rows=5
+          value=form.body}}
+
+  {{input placeholder="Mood"
+          class="input-group form-control"
+          value=form.mood}}
+
+  <button class="btn btn-xs"
+    {{action "submit"}}>
+      Submit
+  </button>
+</form>
